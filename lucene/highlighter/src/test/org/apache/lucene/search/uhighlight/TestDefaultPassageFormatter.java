@@ -50,7 +50,7 @@ public class TestDefaultPassageFormatter extends LuceneTestCase {
         formatter.format(passages, text));
   }
 
-  public void testOverlapping() throws Exception {
+  public void testOverlappingPassages() throws Exception {
     String content = "Yin yang loooooooooong, yin gap yang yong";
     Passage[] passages = new Passage[1];
     passages[0] = new Passage();
