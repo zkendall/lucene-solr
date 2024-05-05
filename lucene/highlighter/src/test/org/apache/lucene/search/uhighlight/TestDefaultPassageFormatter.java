@@ -58,12 +58,12 @@ public class TestDefaultPassageFormatter extends LuceneTestCase {
     passages[0].setEndOffset(41);
     passages[0].setScore(5.93812f);
     passages[0].setScore(5.93812f);
-    passages[0].addMatch(0, 3, new BytesRef(new byte[]{121, 105, 110}),1 );
-    passages[0].addMatch(0, 22, new BytesRef(new byte[]{121, 105, 110, 32, 121, 97, 110, 103, 32, 108, 111, 111, 111, 111, 111, 111, 111, 111, 111, 111, 110, 103, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}), 1);
-    passages[0].addMatch(4, 8, new BytesRef(new byte[]{121, 97, 110, 103}), 1);
-    passages[0].addMatch(9, 22, new BytesRef(new byte[]{108, 111, 111, 111, 111, 111, 111, 111, 111, 111, 111, 110, 103}), 1);
-    passages[0].addMatch(24, 27, new BytesRef(new byte[]{121, 105, 110}), 1);
-    passages[0].addMatch(32, 36, new BytesRef(new byte[]{121, 97, 110, 103}), 1);
+    passages[0].addMatch(0, 3, new BytesRef("yin"),1 );
+    passages[0].addMatch(0, 22, new BytesRef("yin yang loooooooooooong"), 1);
+    passages[0].addMatch(4, 8, new BytesRef("yang"), 1);
+    passages[0].addMatch(9, 22, new BytesRef("loooooooooong"), 1);
+    passages[0].addMatch(24, 27, new BytesRef("yin"), 1);
+    passages[0].addMatch(32, 36, new BytesRef("yang"), 1);
 
     // test default
     DefaultPassageFormatter formatter = new DefaultPassageFormatter();
