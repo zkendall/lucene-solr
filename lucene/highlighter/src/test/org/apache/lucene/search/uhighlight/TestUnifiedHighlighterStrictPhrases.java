@@ -181,11 +181,10 @@ public class TestUnifiedHighlighterStrictPhrases extends LuceneTestCase {
     initReaderSearcherHighlighter();
 
     BooleanQuery query = new BooleanQuery.Builder()
-        .add(newPhraseQuery("body", "yin\\ yang\\ loooooooooong"), BooleanClause.Occur.MUST)
         .add(new TermQuery(new Term("body", "yin")), BooleanClause.Occur.MUST)
         .add(new TermQuery(new Term("body", "yang")), BooleanClause.Occur.MUST)
         .add(new TermQuery(new Term("body", "loooooooooong")), BooleanClause.Occur.MUST)
-
+        .add(newPhraseQuery("body", "yin\\ yang\\ loooooooooong"), BooleanClause.Occur.MUST)
         // add queries for other fields; we shouldn't highlight these because of that.
         .add(new TermQuery(new Term("title", "yang")), BooleanClause.Occur.SHOULD)
         .build();
