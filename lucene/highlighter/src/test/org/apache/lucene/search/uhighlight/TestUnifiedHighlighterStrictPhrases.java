@@ -194,7 +194,7 @@ public class TestUnifiedHighlighterStrictPhrases extends LuceneTestCase {
     dupMatchAllowed.set(false); // We don't want duplicates from "Yin" being in TermQuery & PhraseQuery.
     String[] snippets = highlighter.highlight("body", query, topDocs);
     if (highlighter.getFlags("body").contains(HighlightFlag.WEIGHT_MATCHES)) {
-      assertArrayEquals(new String[]{"<b>Yin yang loooooooooong</b>, yin gap yang yong"}, snippets);
+      assertArrayEquals(new String[]{"<b>Yin yang loooooooooong</b>, <b>yin</b> gap <b>yang</b> yong"}, snippets);
     } else {
       assertArrayEquals(new String[]{"<b>Yin</b> <b>yang</b> <b>loooooooooong</b>, <b>yin</b> gap <b>yang</b> yong"}, snippets);
     }
