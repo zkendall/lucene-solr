@@ -12,6 +12,8 @@ Bug Fixes
 ---------------------
 * SOLR-17168: Add netty-transport-classes-epoll dependency (Colvin Cowie)
 
+SOLR-17417: Remove unnecessary code in PKIAuthPlugin and HttpSolrCall  (Houston Putman, janhoy, Liu Huajin)
+
 ==================  8.11.3 ==================
 
 Consult the LUCENE_CHANGES.txt file for additional, low level, changes in this release.
